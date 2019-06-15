@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/myseek">
+        <TextView
+            android:id="@+id/txtCurrentTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="00:00"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/txtTotalTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="00:00"
+            android:textSize="20dp"
+            android:gravity="right"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+    </RelativeLayout>
+<RelativeLayout
+    android:id="@+id/myseek"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/mybtn">
+    <SeekBar
+        android:id="@+id/seekTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        />
+
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:id="@+id/mybtn"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <ImageButton
+            android:id="@+id/imgPrev"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_weight="0.3"/>
+        <ImageButton
+            android:id="@+id/imgPlay"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_media_play"
+            android:layout_weight="0.3"/>
+        <ImageButton
+            android:id="@+id/imgNext"
+            android:src="@android:drawable/ic_media_next"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="0.3"/>
+    </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
